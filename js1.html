@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Calculator</title>
+</head>
+
+<body>
+
+    <h1>Simple JavaScript Calculator</h1>
+
+    <p>Enter two numbers below and click the button to add them.</p>
+
+    <input type="number" id="num1">
+
+    +
+
+    <input type="number" id="num2">
+
+    <button onclick="calculate()">Calculate</button>
+
+    <p id="answer"></p>
+
+    <script>
+        function calculate() {
+            let number1 = Number(document.getElementById("num1").value);
+            let number2 = Number(document.getElementById("num2").value);
+
+            let result = number1 + number2;
+
+            document.getElementById("answer").innerHTML = "Answer: " + result;
+        }
+    </script>
+
+</body>
+
+</html>
