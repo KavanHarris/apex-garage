@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Calculator</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Calculator</h1>
+
+    <p>Enter two numbers and choose an operation.</p>
+
+    <input type="number" id="num1">
+
+    <input type="number" id="num2">
+
+    <br><br>
+
+    <button onclick="add()">Add</button>
+    <button onclick="subtract()">Subtract</button>
+    <button onclick="multiply()">Multiply</button>
+    <button onclick="divide()">Divide</button>
+
+    <p id="answer"></p>
+
+    <script>
+
+        function add() {
+            let number1 = Number(document.getElementById("num1").value);
+            let number2 = Number(document.getElementById("num2").value);
+
+            let result = number1 + number2;
+
+            document.getElementById("answer").innerHTML = "Answer: " + result;
+        }
+
+        function subtract() {
+            let number1 = Number(document.getElementById("num1").value);
+            let number2 = Number(document.getElementById("num2").value);
+
+            let result = number1 - number2;
+
+            document.getElementById("answer").innerHTML = "Answer: " + result;
+        }
+
+        function multiply() {
+            let number1 = Number(document.getElementById("num1").value);
+            let number2 = Number(document.getElementById("num2").value);
+
+            let result = number1 * number2;
+
+            document.getElementById("answer").innerHTML = "Answer: " + result;
+        }
+
+        function divide() {
+            let number1 = Number(document.getElementById("num1").value);
+            let number2 = Number(document.getElementById("num2").value);
+
+            if (number2 == 0) {
+                document.getElementById("answer").innerHTML = "Cannot divide by zero.";
+            } else {
+                let result = number1 / number2;
+
+                document.getElementById("answer").innerHTML = "Answer: " + result;
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
